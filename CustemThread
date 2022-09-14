@@ -1,0 +1,25 @@
+import java.util.Scanner;
+
+class MyThread extends Thread{
+    int x;
+    MyThread(int x){
+        this.x=x;
+    }
+    public void run() {
+        
+        for(int i=1 ; i<=x ; i=i+2){ 
+    System.out.println(i);
+    }
+  }
+}
+class HelloWorld{
+  public static void main(String[] args) {
+      Scanner sc = new Scanner(System.in);
+      System.out.print("Enter a number:");
+      int y = sc.nextInt();
+      
+      Thread t= new MyThread(y);
+      t.start();
+  }
+  
+}
