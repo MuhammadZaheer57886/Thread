@@ -1,0 +1,17 @@
+class MyThread extends Thread{
+    public void run() {
+        for(int i=0;i<100;i++){ 
+    System.out.print("*");
+    }
+  }
+}
+class HelloWorld{
+  public static void main(String[] args) {
+      Thread t= new MyThread();
+      t.start();
+  	for(int i=0;i<100;i++){
+        System.out.print("#");
+        }
+  }
+  
+}
